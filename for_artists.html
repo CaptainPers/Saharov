@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Cormorant+SC:wght@700&family=Lato:wght@400;700&family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Официальный сайт художника Сахарова Игоря</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- ШАПКА\МЕНЮ -->
+        <header class="header lock-padding">
+            <div class="header_container">
+                <a href="#" class="header_logo">Все для живописи</a>
+                <nav class="header_menu menu">
+                    <div class="menu_body">
+                        <ul class="menu_list">
+                            <li class="menu_item">
+                                <a data-goto=".home" href="#popup_empty" class="menu_link popup-link">ВИДЕО УРОКИ</a>
+                            </li>
+                            <li class="menu_item">
+                                <a data-goto=".about" href="#" class="menu_link">МАТЕРИАЛЫ ХУДОЖНИКАМ</a>
+                            </li>
+                            <li class="menu_item">
+                                <a data-goto=".products" href="#" class="menu_link">ХОЛСТЫ</a>
+                            </li>
+                            <li class="menu_item">
+                                <a data-goto=".news" href="#" class="menu_link">КИСТИ</a>
+                            </li>
+                            <li class="menu_item">
+                                <a data-goto=".events" href="#" class="menu_link">САХАРОВ TV</a>
+                            </li>
+                            <li class="menu_item">
+                                <a data-goto=".blog" href="#popup_feedback" class="menu_link popup-link">ОБРАТНАЯ СВЯЗЬ</a>
+                            </li>
+                            <li class="menu_item">
+                                <a data-goto="" href="#popup_shopping-cart" class="menu_link popup-link">
+                                    <span class="top_cart-icon">&#128722;</span>
+                                </a>
+                                <a data-goto="" href="#popup_shopping-cart" class="menu_link rec_bin popup-link" data-product-count="0">КОРЗИНА</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form action="" class="header_form">
+                        <input type="search" class="header_form-input" placeholder="Поиск...">
+                        <a href="#" class="search_icon">
+                            <img src="/img/header_nav/search.svg" alt="search">
+                        </a>
+                    </form>
+                    <button class="menu_icon icon-menu" type="button">
+                        <span class="icon_menu-line"></span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+        
+
+        <main class="main">
+            <!-- СЛАЙДЕР -->
+            <div class="head_slider">
+                <div class="home_main-slider main-slider swiper">
+                    <div class="main-slider_wrapper swiper-wrapper">
+                        <div class="main-slider_slide swiper-slide">
+                            <img src="/img/header_slider/back1.jpg" alt="main_slide" class="main-slider_bg">
+                            <div class="main-slider_container">
+                                <div class="main-slider_title title">Научиться рисовать теперь легко!</div>
+                                <div class="main-slider_body">
+                                    <div class="main-slider_text text">Масляная живопись для новичков</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-slider_slide swiper-slide">
+                            <img src="/img/header_slider/back2.jpg" alt="main_slide" class="main-slider_bg">
+                            <div class="main-slider_container">
+                                <div class="main-slider_title title">Научиться рисовать теперь легко!</div>
+                                <div class="main-slider_body">
+                                    <div class="main-slider_text text">Масляная живопись для новичков</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-slider_slide swiper-slide">
+                            <img src="/img/header_slider/back3.jpg" alt="main_slide" class="main-slider_bg">
+                            <div class="main-slider_container">
+                                <div class="main-slider_title title">Научиться рисовать теперь легко!</div>
+                                <div class="main-slider_body">
+                                    <div class="main-slider_text text">Масляная живопись для новичков</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-slider_slide swiper-slide">
+                            <img src="/img/header_slider/back4.jpg" alt="main_slide" class="main-slider_bg">
+                            <div class="main-slider_container">
+                                <div class="main-slider_title title">Научиться рисовать теперь легко!</div>
+                                <div class="main-slider_body">
+                                    <div class="main-slider_text text">Масляная живопись для новичков</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-slider_slide swiper-slide">
+                            <img src="/img/header_slider/back5.jpg" alt="main_slide" class="main-slider_bg">
+                            <div class="main-slider_container">
+                                <div class="main-slider_title title">Научиться рисовать теперь легко!</div>
+                                <div class="main-slider_body">
+                                    <div class="main-slider_text text">Масляная живопись для новичков</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-slider_bullets bullets">
+                        <div class="bullets_container">
+                            <div class="bullets_items"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- МАТЕРИАЛЫ ХУДОЖНИКАМ -->
+            <div class="for_sect for_artists">
+                <div class="shop_container artists_container">
+                    <h2 class="shop_title artists_title">Материалы художникам</h2>
+                    <div class="shop_subtitle artists_subtitle">Материалы рекомендованные Сахаровым Игорем</div>
+                    <div class="shop_body artists_body">
+                        <div class="shop_card artists_card">
+                            <div class="shop_card-top">
+                                <a href="#image" class="top_image popup-link">
+                                    <img src="/img/artists/01.png" alt="image">
+                                </a>
+                                <div class="top_title">Набор красок</div>
+                                <p class="top_text">Специально подобранные 9 цветов необходимые для старта в живописи.
+                                    <!-- <a href="#video" class="popup_video popup-link">ПРОСМОТРЕТЬ</a> -->
+                                </p>
+                                <div class="delivery">
+                                    <div class="del1">Срок доставки: 1-2 недели.</div>
+                                    <div class="del2">Отправка по всему миру. </div>
+                                </div>
+                            </div>
+                            <div class="shop_card-bottom">
+                                <div class="shop_price">
+                                    <div class="price_top-line">
+                                        <div class="price-through">€75</div>
+                                    <div class="discount">40%</div>
+                                    </div>
+                                    <div class="price_normal">€72</div>
+                                </div>
+                                <a href="#" class="bb_con add-to-cart">
+                                    <div class="buy_button" data-hidetext="УБРАТЬ ИЗ КОРЗИНЫ" data-showtext="ЗАКАЗАТЬ">ЗАКАЗАТЬ</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shop_card artists_card">
+                            <div class="shop_card-top">
+                                <a href="#image" class="top_image popup-link">
+                                    <img src="/img/artists/02.png" alt="image">
+                                </a>
+                                <div class="top_title">Набор красок</div>
+                                <p class="top_text">Специально подобранные 9 цветов необходимые для старта в живописи.
+                                    <!-- <a href="#video" class="popup_video popup-link">ПРОСМОТРЕТЬ</a> -->
+                                </p>
+                                <div class="delivery">
+                                    <div class="del1">Срок доставки: 1-2 недели.</div>
+                                    <div class="del2">Отправка по всему миру. </div>
+                                </div>
+                            </div>
+                            <div class="shop_card-bottom">
+                                <div class="shop_price">
+                                    <div class="price_top-line">
+                                        <div class="price-through">€75</div>
+                                    <div class="discount">40%</div>
+                                    </div>
+                                    <div class="price_normal">€72</div>
+                                </div>
+                                <a href="#" class="bb_con add-to-cart">
+                                    <div class="buy_button" data-hidetext="УБРАТЬ ИЗ КОРЗИНЫ" data-showtext="ЗАКАЗАТЬ">ЗАКАЗАТЬ</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shop_card artists_card">
+                            <div class="shop_card-top">
+                                <a href="#image" class="top_image popup-link">
+                                    <img src="/img/artists/03.png" alt="image">
+                                </a>
+                                <div class="top_title">Набор красок</div>
+                                <p class="top_text">Специально подобранные 9 цветов необходимые для старта в живописи.
+                                    <!-- <a href="#video" class="popup_video popup-link">ПРОСМОТРЕТЬ</a> -->
+                                </p>
+                                <div class="delivery">
+                                    <div class="del1">Срок доставки: 1-2 недели.</div>
+                                    <div class="del2">Отправка по всему миру. </div>
+                                </div>
+                            </div>
+                            <div class="shop_card-bottom">
+                                <div class="shop_price">
+                                    <div class="price_top-line">
+                                        <div class="price-through">€75</div>
+                                    <div class="discount">40%</div>
+                                    </div>
+                                    <div class="price_normal">€72</div>
+                                </div>
+                                <a href="#" class="bb_con add-to-cart">
+                                    <div class="buy_button" data-hidetext="УБРАТЬ ИЗ КОРЗИНЫ" data-showtext="ЗАКАЗАТЬ">ЗАКАЗАТЬ</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shop_card artists_card">
+                            <div class="shop_card-top">
+                                <a href="#image" class="top_image popup-link">
+                                    <img src="/img/artists/04.png" alt="image">
+                                </a>
+                                <div class="top_title">Набор красок</div>
+                                <p class="top_text">Специально подобранные 9 цветов необходимые для старта в живописи.
+                                    <!-- <a href="#video" class="popup_video popup-link">ПРОСМОТРЕТЬ</a> -->
+                                </p>
+                                <div class="delivery">
+                                    <div class="del1">Срок доставки: 1-2 недели.</div>
+                                    <div class="del2">Отправка по всему миру. </div>
+                                </div>
+                            </div>
+                            <div class="shop_card-bottom">
+                                <div class="shop_price">
+                                    <div class="price_top-line">
+                                        <div class="price-through">€75</div>
+                                    <div class="discount">40%</div>
+                                    </div>
+                                    <div class="price_normal">€72</div>
+                                </div>
+                                <a href="#" class="bb_con add-to-cart">
+                                    <div class="buy_button" data-hidetext="УБРАТЬ ИЗ КОРЗИНЫ" data-showtext="ЗАКАЗАТЬ">ЗАКАЗАТЬ</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shop_card artists_card">
+                            <div class="shop_card-top">
+                                <a href="#image" class="top_image popup-link">
+                                    <img src="/img/artists/05.png" alt="image">
+                                </a>
+                                <div class="top_title">Набор красок</div>
+                                <p class="top_text">Специально подобранные 9 цветов необходимые для старта в живописи.
+                                    <!-- <a href="#video" class="popup_video popup-link">ПРОСМОТРЕТЬ</a> -->
+                                </p>
+                                <div class="delivery">
+                                    <div class="del1">Срок доставки: 1-2 недели.</div>
+                                    <div class="del2">Отправка по всему миру. </div>
+                                </div>
+                            </div>
+                            <div class="shop_card-bottom">
+                                <div class="shop_price">
+                                    <div class="price_top-line">
+                                        <div class="price-through">€75</div>
+                                    <div class="discount">40%</div>
+                                    </div>
+                                    <div class="price_normal">€72</div>
+                                </div>
+                                <a href="#" class="bb_con add-to-cart">
+                                    <div class="buy_button" data-hidetext="УБРАТЬ ИЗ КОРЗИНЫ" data-showtext="ЗАКАЗАТЬ">ЗАКАЗАТЬ</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shop_card artists_card">
+                            <div class="shop_card-top">
+                                <a href="#image" class="top_image popup-link">
+                                    <img src="/img/artists/06.png" alt="image">
+                                </a>
+                                <div class="top_title">Набор красок</div>
+                                <p class="top_text">Специально подобранные 9 цветов необходимые для старта в живописи.
+                                    <!-- <a href="#video" class="popup_video popup-link">ПРОСМОТРЕТЬ</a> -->
+                                </p>
+                                <div class="delivery">
+                                    <div class="del1">Срок доставки: 1-2 недели.</div>
+                                    <div class="del2">Отправка по всему миру. </div>
+                                </div>
+                            </div>
+                            <div class="shop_card-bottom">
+                                <div class="shop_price">
+                                    <div class="price_top-line">
+                                        <div class="price-through">€75</div>
+                                    <div class="discount">40%</div>
+                                    </div>
+                                    <div class="price_normal">€72</div>
+                                </div>
+                                <a href="#" class="bb_con add-to-cart">
+                                    <div class="buy_button" data-hidetext="УБРАТЬ ИЗ КОРЗИНЫ" data-showtext="ЗАКАЗАТЬ">ЗАКАЗАТЬ</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer artist_footer">
+            <!-- ИНСТИТУТ ЗА 100 ДНЕЙ\ ВИДЕО-АРТ-ГАЛЕРЕЯ -->
+            <div class="other_info">
+                <div class="other_info_container">
+                    <div class="other_info-body">
+                        <div class="other_info-item">
+                            <div class="other_top">
+                                <a href="#" class="info-item_image">
+                                    <img src="/img/other_info/item1.png" alt="image">
+                                </a>
+                                <div class="info-item_title">КУРС “ИНСТИТУТ ЗА 100 ДНЕЙ”</div>
+                                <div class="info-item_text">Данный курс рассчитан на новичков в масляной живописи и включает в себя последовательные шаги по обучению в различных направлениях.</div>
+                            </div>
+                            <a href="#" class="bb_con bb_other">
+                                <div class="buy_button other_button">СТАТЬ УЧАСТНИКОМ</div>
+                            </a>
+                        </div>
+                        <div class="other_info-item">
+                            <div class="other_top">
+                                <a href="#" class="info-item_image">
+                                    <img src="/img/other_info/item2.png" alt="image">
+                                </a>
+                                <div class="info-item_title">ВИДЕО АРТ-ГАЛЕРЕЯ</div>
+                                <div class="info-item_text">Разнообразный мир искусства представленный художниками со всего мира.</div>
+                            </div>
+                            <a href="#" class="bb_con bb_other">
+                                <div class="buy_button other_button">ПОСЕТИТЬ ГАЛЕРЕЮ</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- СОЦ СЕТИ -->
+            <div class="social">
+                <div class="social_container">
+                    <div class="social_item">
+                        <a href="#">
+                            <img src="/img/social/insta.svg" alt="social">
+                        </a>
+                    </div>
+                    <div class="social_item">
+                        <a href="#">
+                            <img src="/img/social/pay.svg" alt="social">
+                        </a>
+                    </div>
+                    <div class="social_item">
+                        <a href="#">
+                            <img src="/img/social/telega.svg" alt="social">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+<!-- ОБРАТНАЯ СВЯЗЬ -->
+    <div id="popup_feedback" class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <div class="form_head-part">
+                    <h3 class="form_title feedback_title">Обратная связь</h3>
+                    <a href="" class="popup_close close-popup">
+                        <img src="/img/forms/close button.svg" alt="close_button">
+                    </a>
+                </div>
+                <form action="#" class="feedback_form">
+                    <div class="form_subtitle">Email</div>
+                    <input type="mail" class="form_input" placeholder="Например, mail@example.com">
+                    <div class="form_hint">Укажите почту, чтобы мы могли с вами связаться</div>
+
+                    <div class="form_subtitle">Телефон</div>
+                    <input type="phone" class="form_input" placeholder="Например, +380939999999">
+                    <div class="form_hint">Телефон поможет нам быстрее связаться с вами</div>
+
+                    <input type="text" class="form_comment" placeholder="Комментарий к заказу">
+                    <div class="form_hint">Сообщите нам подробности заказа</div>
+
+                    <div class="shop_card-bottom feedback_button">
+                        <a href="#" class="bb_con">
+                            <div class="buy_button feedback_but">ОТПРАВИТЬ</div>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- ЗАКАЗ ПРИНЯТ -->
+    <div id="popup_order-accept" class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <div class="form_head-part order_accepted_head-part">
+                    <h3 class="form_title order_accepted">Спасибо. Ваш заказ принят.</h3>
+                    <a href="" class="popup_close close-popup">
+                        <img src="/img/forms/close button.svg" alt="close_button">
+                    </a>
+                </div>
+                <div class="order_message-body">
+                    <p class="order_text">Скоро с Вами свяжутся по почте или в одном из мессенджеров (WhatsApp, Telegram). Ожидайте пожалуйста и периодически проверяйте вышеуказанные ресурсы.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ПУСТАЯ КОРЗИНА -->
+    <div id="popup_empty" class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <div class="form_head-part order_accepted_head-part">
+                    <h3 class="form_title order_accepted">Заказ товара</h3>
+                    <a href="" class="popup_close close-popup">
+                        <img src="/img/forms/close button.svg" alt="close_button">
+                    </a>
+                </div>
+                <div class="order_message-body">
+                    <p class="order_text">Корзина пуста. <br>
+                        Для оформления заказа, пожалуйста, сначала добавьте желаемые товары в корзину</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- КОРЗИНА -->
+    <div id="popup_shopping-cart" class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <div class="form_head-part">
+                    <h3 class="form_title shopping-cart_title">Заказ товара</h3>
+                    <a href="" class="popup_close close-popup">
+                        <img src="/img/forms/close button.svg" alt="close_button">
+                    </a>
+                </div>
+                <div class="product_list">
+                    <div class="form_subtitle">Товары</div>
+                    <div class="product_list-body">
+                        <div class="product_list-item">
+                            <div class="product_name-and_delite">
+                                <div class="product_list-name">Русалка</div>
+                                <a href="#" class="product_list-delete">x</a>
+                            </div>
+                            <div class="product_list-price">€7</div>
+                        </div>
+                        <div class="product_list-item">
+                            <div class="product_name-and_delite">
+                                <div class="product_list-name">Русалка</div>
+                                <a href="#" class="product_list-delete">x</a>
+                            </div>
+                            <div class="product_list-price">€7</div>
+                        </div>
+                        <div class="product_list-item">
+                            <div class="product_name-and_delite">
+                                <div class="product_list-name">Русалка</div>
+                                <a href="#" class="product_list-delete">x</a>
+                            </div>
+                            <div class="product_list-price">€7</div>
+                        </div>
+                        <div class="product_list-item">
+                            <div class="product_name-and_delite">
+                                <div class="product_list-name">Русалка</div>
+                                <a href="#" class="product_list-delete">x</a>
+                            </div>
+                            <div class="product_list-price">€7</div>
+                        </div>
+                        <div class="product_list-item">
+                            <div class="product_name-and_delite">
+                                <div class="product_list-name">Русалка</div>
+                                <a href="#" class="product_list-delete">x</a>
+                            </div>
+                            <div class="product_list-price">€7</div>
+                        </div>
+                        <div class="product_list-total_price">
+                            <p class="total_price">Всего: €7</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_attentions">
+                    <p class="form_attentions-text">Внимание! Пожалуйста, указывайте актуальный e-mail адрес, на него после оплаты автоматически будут отправлены ссылки на видеоуроки, если они есть в Вашем заказе. Почтовые услуги доставки художественных материалов оплачиваются отдельно.</p>
+                </div>
+                <form action="#" class="shopping-cart_form">
+                    <div class="form_subtitle shopping-cart_subtitle">Email</div>
+                    <input type="mail" class="form_input shopping-cart_input" placeholder="Например, mail@example.com">
+                    <div class="form_hint shopping-cart_hint">Укажите почту, чтобы мы могли с вами связаться</div>
+
+                    <div class="form_subtitle shopping-cart_subtitle">Телефон</div>
+                    <input type="phone" class="form_input shopping-cart_input" placeholder="Например, +380939999999">
+                    <div class="form_hint shopping-cart_hint">Телефон поможет нам быстрее связаться с вами</div>
+
+                    <input type="text" class="form_comment shopping-cart_comment" placeholder="Комментарий к заказу">
+                    <div class="form_hint shopping-cart_hint">Сообщите нам подробности заказа</div>
+
+                    <div class="shop_card-bottom feedback_button">
+                        <a href="#" class="bb_con">
+                            <div class="buy_button feedback_but">ЗАКАЗАТЬ</div>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- ЗУМ КАРТИНКИ КАРТОЧКИ ТОВАРОВ -->
+    <div id="image" class="popup">
+    <div class="popup_body">
+        <div class="popup_content image_content">
+            <div class="form_head-part order_accepted_head-part">
+                <a href="" class="popup_close close-popup close_image">
+                    <img src="/img/forms/close button.svg" alt="close_button">
+                </a>
+            </div>
+            <img class="popup_image" src="/img/artists/01.jpg" alt="image">
+        </div>
+    </div>
+    </div>
+<!-- ДЕМО ВИДЕО КАРТОЧКИ ТОВАРОВ -->
+    <div id="video" class="popup">
+        <div class="popup_body">
+            <div class="popup_content image_content video_content">
+                <div class="form_head-part order_accepted_head-part">
+                    <a href="" class="popup_close close-popup close_image">
+                        <img src="/img/forms/close button.svg" alt="close_button">
+                    </a>
+                </div>
+                <video height="auto" width:="auto" controls="controls" controlslist="nodownload" src="/img/demo_video/01.mp4" class="pop_video"></video>
+            </div>
+        </div>
+    </div>
+<!-- КОРЗИНА БОКОВАЯ -->
+    <a href="#popup_shopping-cart" class="shopping-cart popup-link" data-product-count="0">
+        <span class="cart-icon">&#128722;</span>
+    </a>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="/js/swiper.js"></script> -->
+    <script src="/js/script.js"></script>
+</body>
+</html>

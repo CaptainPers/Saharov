@@ -1,0 +1,1910 @@
+@import url(/css/reset.css);
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+ [class*="_container"] {
+    max-width: 1200px;
+    padding: 0rem 15px;
+    margin: 0 auto;
+}
+body.lock {
+    overflow: hidden;
+}
+main {
+    flex: 1 1 auto;
+}
+html {
+    /* font-family: 'Bad Script', cursive;
+    font-family: 'Cormorant SC', serif; */
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+}
+.menu-open body {
+    overflow: hidden;
+}
+
+/*===========================СТРАНИЦА ТОВАРОВ\КАРТОЧКА ТОВАРОВ=====================================*/
+.shop_container {
+    display: flex;
+    flex-direction: column;
+}
+.shop_title {
+    font-size: 40px;
+    line-height: 120%;
+    margin-bottom: 31px;
+}
+.shop_subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 59px;
+}
+.shop_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.shop_card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 30%;
+    justify-content: space-between;
+    padding: 18px;
+    border: 1px solid #D9D9D9;
+    border-radius: 15px;
+    /* overflow: hidden; */
+    transition: all 0.3s;
+}
+.shop_card-top {
+    flex: 1 1 auto;
+}
+.top_image {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 21px;
+    max-height: 230px;
+}
+.top_image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.top_title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 122.222222%;
+    letter-spacing: 0.03em;
+    margin-bottom: 13px;
+}
+.top_text {
+    font-size: 14px;
+    line-height: 142.857143%;
+    letter-spacing: 0.03em;
+    color: #676767;
+    margin-bottom: 15px;
+}
+.popup_video {
+    color:rgba(0, 76, 255, 0.866);
+    font-weight: 700;
+
+}
+.delivery {
+    font-size: 14px;
+    line-height: 142.857143%;
+    letter-spacing: 0.03em;
+    color: #676767;
+}
+.del1 {
+    margin-bottom: 8px;
+}
+.del2 {
+}
+.shop_card-bottom {
+}
+.shop_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.price_top-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.price-through {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    text-decoration-line: line-through;
+    color: #B3B3B3;
+}
+.discount {
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 121.428571%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding: 2px 3px;
+    background: #FF2E00;
+    border-radius: 10px;
+    margin-left: 8px;
+    text-decoration: none;
+}
+.price_normal {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 119.230769%;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+.bb_con {
+    display: flex;
+    justify-content: center;
+}
+.buy_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 120%;
+    border: 1px solid #203943;
+    border-radius: 25px;
+    background: #fff;
+    transition: all 0.3s linear;
+}
+/*КНОПКА - НЕТ В НАЛИЧИИ*/
+.no_button {
+    display: inline-block;
+    padding: 13px 60px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 120%;
+    border: 1px solid #203943;
+    border-radius: 25px;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, #FF0000 44.79%);
+    margin-left: 5%;
+    transition: all 0.4s linear;
+}
+/*=============================БОКОВАЯ КОРЗИНА========================================*/
+.shopping-cart {
+    position: fixed;
+    top: 50%; right: 0;
+    width: 4rem;
+    height: 4rem;
+    background-color: #ff5e00;
+    border-radius: 50%;
+    outline: .5rem solid transparent;
+    text-align:center;
+    line-height: 4rem;
+    cursor: pointer;
+    box-shadow: 0 .2rem .6rem #0006;
+    transition: .5s ease-in-out;
+}
+.shopping-cart::before {
+    position: absolute;
+    content: attr(data-product-count);
+    top: -.5rem;
+    right: -.1rem;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    background-color: #f00;
+    font-family: sans-serif;
+    border-radius: 50%;
+    text-align:center;
+    line-height: 2rem;
+}
+.cart-icon {
+    font-size: 2rem;
+    transition: .5s ease-in-out;
+}
+.shopping-cart.active {
+    width: 8rem;
+    border-radius: .8rem;
+}
+.shopping-cart.active > span{
+    margin-left: -4rem;
+}
+
+/* For Js Code */
+
+.flying-img {
+    position: absolute;
+    animation: fly_to_cart 1s ease-in-out;
+}
+
+@keyframes fly_to_cart {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    45%, 50% {
+        left: var(--left);
+        top: 100px;
+    }
+    80%, 90% {
+        left: var(--left);
+        top: var(--top);
+        transform: scale(.2);
+    }
+    100% {
+        left: calc(var(--left) + 40px);
+        top: var(--top);
+        transform: scale(.2);
+    }
+}
+/*=============================БОКОВАЯ КОРЗИНА========================================*/
+
+/*===========================ОБРАТНАЯ_СВЯЗЬ=====================================*/
+.popup {
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.555);
+    top: 0; left: 0;
+    opacity: 0;            
+    visibility: hidden; 
+    transition: all 0.5s ease 0s;
+    z-index: 1000;
+}
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+.popup.open .popup_content {
+    transform: translate(0px, 0%) rotateY(0deg);
+    opacity: 1;
+}
+.popup_body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+.popup_content {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    padding: 25px 20px 20px 20px;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%) rotateY(45deg);
+}
+.form_head-part {
+    display: flex;
+    justify-content: space-between;
+}
+.form_title {
+    line-height: 118.75%;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+}
+.feedback_form {
+}
+.form_subtitle {
+    font-size: 14px;
+    line-height: 121.428571%;
+    letter-spacing: 0.03em;
+    color: #838383;
+    margin-bottom: 10px;
+}
+.form_hint {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+}
+.form_input {
+    width: 100%;
+    padding: 7px 0 7px 11px;
+    font-size: 14px;
+    line-height: 121.428571%;
+    letter-spacing: 0.03em;
+    color: #838383;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.form_comment {
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    padding: 7px 0 15% 11px;
+    margin-bottom: 10px;
+}
+.shop_card-bottom {
+}
+.feedback_button {
+}
+.bb_con {
+}
+.buy_button {
+}
+/*===========================ОБРАТНАЯ_СВЯЗЬ=====================================*/
+
+/*===========================ЗАКАЗ_ПРИНЯТ=====================================*/
+.order_message-body {
+    max-width: 500px;
+    background: #203943;
+    border: 1px solid #9E9E9E;
+    border-radius: 10px;
+    padding: 15px 12px;
+}
+.order_text {
+    font-size: 15px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+/*===========================ЗАКАЗ_ПРИНЯТ=====================================*/
+
+/*===========================КОРЗИНА=====================================*/
+.product_list {
+}
+.form_subtitle {
+}
+.product_list-body {
+    display: flex;
+    flex-direction: column;
+}
+.product_list-item {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.product_name-and_delite {
+    display: flex;
+}
+.product_list-name {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-right: 5px;
+}
+.product_list-delete {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: #FF0000;
+}
+.product_list-price {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 121.428571%;
+    letter-spacing: 0.03em;
+    color: #000000;
+}
+.product_list-total_price {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 7px;
+}
+.total_price {
+    line-height: 118.75%;
+    color: #FFFFFF;
+    background: #203943;
+    border: 1px solid #9E9E9E;
+    border-radius: 5px;
+    padding: 11px 23px;
+    margin-top: 10px;
+}
+.form_attentions {
+    background: rgba(255, 138, 0, 0.85);
+    border-radius: 10px;
+    padding: 6px 17px;
+    max-width: 500px;
+    margin-bottom: 10px;
+}
+.form_attentions-text {
+    font-size: 14px;
+    line-height: 121.428571%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+/*Настройка корзины*/
+.shopping-cart_form {
+}
+.shopping-cart_subtitle {
+}
+.shopping-cart_input {
+}
+.form_hint {
+}
+.shopping-cart_hint {
+}
+.shopping-cart_comment {
+}
+.shop_card-bottom {
+}
+/*===========================КОРЗИНА=====================================*/
+
+/*===========================ЗУМ КАРТИНКИ КАРТОЧКИ ТОВАРА/УРОКА=====================================*/
+.popup {
+}
+.popup_body {
+}
+.popup_content {
+}
+.image_content {
+    position: relative;
+    padding: 10px !important;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 1024px;
+    max-height: 700px;
+}
+.close_image {
+    position: absolute;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 5px;
+    background: #fff;
+    top: 15px;right: 15px;
+}
+.popup_image {
+    /* border-radius: 10px;
+    overflow: hidden; */
+}
+.popup_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+/*===========================ЗУМ КАРТИНКИ КАРТОЧКИ ТОВАРА=====================================*/
+
+/*=========================ШАПКА============================================*/
+.header {
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    height: 77px;
+    background-color: #203943;
+    z-index: 50;
+}
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 77px;
+}
+.header_logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Bad Script', cursive;
+    font-size: 30px;
+    /* line-height: 59px; */
+    color: #FFFFFF;
+    position: relative;
+    z-index: 5;
+}
+.header_menu {
+    display: flex;
+    align-items: center;
+}
+.menu {
+}
+.menu_body {
+    position: relative;
+    z-index: 5;
+}
+.menu_list {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* column-gap: 30px;
+    row-gap: 5px; */
+    flex-wrap: wrap;
+}
+.menu_item {
+    margin-right: 17px;
+}
+.menu_link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+.top_cart-icon {
+    font-size: 20px;
+}
+.rec_bin {
+    position: relative;
+    margin-left: 5px;
+    margin-right: 18px;
+}
+.rec_bin::before {
+    position: absolute;
+    content: attr(data-product-count);
+    top: -3px;
+    left: 70px;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #fff;
+    background-color: #f00;
+    border-radius: 50%;
+    text-align:center;
+    line-height: 1.5rem;
+    /* margin-right: 10px; */
+}
+.menu_icon {
+}
+.icon-menu {
+    display: none;
+}
+.icon_menu-line {
+}
+
+.header_form {
+    display: flex;
+    align-items: center;
+}
+.header_form-input {
+    display: flex;
+    position: absolute;
+    top: 115%;
+    right: 0;
+    width: 500px;
+    height: 50px;
+    align-items: center;
+    font-size: 18px;
+    line-height: 116.666667%;
+    text-align: center;
+    color: #000000;
+    margin-right: 20px;
+    padding-left: 15px;
+    border-bottom: 1px solid #E5E5E5;
+    background: #ffffff;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.5s ease 0s;
+}
+.header_form-input.active {
+    transform: scaleY(1);
+}
+.search_icon {
+}
+/*=========================ШАПКА============================================*/
+
+/*=========================РАСШИРЕННЫЙ_ПОИСК============================================*/
+.extended_search {
+    display: none;
+    position: absolute;
+    top: 190%;
+    right: 0;
+    width: 500px;
+    background: #ffffff;
+    margin-right: 20px;
+}
+.extended_search-body {
+    display: flex;
+    flex-direction: column;
+}
+.extended_search-top {
+    padding: 14px 0px 14px 20px;
+    border-bottom: 1px solid #D2D2D2;
+}
+.all_result {
+    font-weight: 600;
+    line-height: 118.75%;
+    color: #00327C;
+}
+.extended_search-middle {
+    padding: 10px 0px 20px 20px;
+    border-bottom: 1px solid #D2D2D2;
+}
+.search-middle_title {
+    font-size: 12px;
+    line-height: 14px;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.extended_search-middle-item {
+}
+.extended_search-middle-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.middle-item_name {
+    font-weight: 600;
+    line-height: 118.75%;
+}
+.middle-item_category {
+    padding-left: 5px;
+    line-height: 118.75%;
+    color: #8B8B8B;
+}
+.extended_search-bottom {
+    padding: 25px 40px 25px 20px;
+}
+.extended_search-bottom-item {
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-item_left {
+    display: flex;
+    align-items: center;
+}
+.bottom-item_image {
+    max-width: 45px;
+    max-height: 35px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 14px;
+}
+.bottom-item_image img {
+    width: 100%;height: 100%;
+    object-fit: cover;
+}
+.bottom-item_name {
+    font-weight: 600;
+    line-height: 118.75%;
+}
+.bottom-item_right {
+}
+.shop_price {
+}
+.search_price {
+}
+.price_top-line {
+}
+.price-through {
+}
+.search_price-through {
+    font-size: 16px;
+}
+.discount {
+}
+.search_discount {
+    font-size: 14px;
+}
+.price_normal {
+}
+.search_price-normal {
+    font-size: 20px;
+}
+/*=========================РАСШИРЕННЫЙ_ПОИСК============================================*/
+
+/*=========================HEADER_SLIDER============================================*/
+.main-slider {
+    min-width: 0;
+}
+.main-slider_wrapper {
+    display: flex;
+}
+.main-slider_slide {
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+}
+.main-slider_bg {
+    position: absolute;
+    width: 100%;height: 100%;
+    top: 0;left: 0;
+    object-fit: cover;
+    opacity: 0.4;
+}
+.main-slider_container {
+    min-height: 100vh;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem;
+    padding-top: 200px;
+    padding-bottom: 140px;
+}
+.main-slider_title {
+    font-family: 'Playfair Display', serif;
+    font-size: 68px;
+    line-height: 142.857143%;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    margin-bottom: 72px;
+}
+.main-slider_body {
+    color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    gap: 0.6875rem;
+}
+.main-slider_text {
+    font-family: 'Cormorant SC', serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+.main-slider_bullets {
+}
+.bullets {
+    position: relative;
+    z-index: 2;
+    margin-top: -8.75rem;
+}
+.bullets_container {
+}
+.bullets_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8.75rem;
+    gap: 0.625rem;
+}
+.bullets_items .swiper-pagination-bullet{
+    flex: 0 0 0.5rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.2;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+.bullets_items .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+.main-slider_title,
+.main-slider_body {
+    transform: translate(0px, 3.125rem);
+    opacity: 0;
+    transition: all 0.8s;
+}
+.loaded .main-slider_title {
+    transition-delay: 0.7s;
+}
+.loaded .main-slider_body {
+    transition-delay: 0.9s;
+}
+.loaded .main-slider_title,
+.loaded .main-slider_body {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+/*=========================HEADER_SLIDER============================================*/
+
+/*=========================AHTUNG_SECTION============================================*/
+.ahtung {
+    background: #203943;
+}
+.ahtung_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 18px;
+    padding: 48px 0;
+    margin: 0 auto;
+    color: #fff;
+}
+.ahtung_info {
+    background: linear-gradient(180deg, rgba(171, 228, 249, 0) 0%, #7A8386 100%);
+    border: 1px solid #9E9E9E;
+    box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.info_avatar {
+    text-align: center;
+    padding: 49px 45px 0 45px;
+    margin-bottom: 31px;
+    
+}
+.info_avatar img {
+    /* width: 100%; */
+    object-fit: cover;
+}
+.info_name {
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 27px;
+}
+.info_prof {
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 27px;
+}
+.info_button {
+    display: flex;
+    justify-content: center;
+    margin: 0 15px 15px 15px;
+    
+}
+.info_button img {
+    transition: all 0.3s ease-in-out;
+}
+.ahtung_attention {
+    flex: 1 1 auto;
+    background: linear-gradient(180deg, rgba(171, 228, 249, 0) 0%, #7A8386 100%);
+    border: 1px solid #9E9E9E;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0 32px;
+    margin: 0 15px;
+    box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.attention_title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 150%;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+.attention_subtitle {
+    font-size: 24px;
+    line-height: 150%;
+    margin-bottom: 15px;
+}
+.video {
+    margin-bottom: 16px;
+}
+.attention_text {
+    font-size: 14px;
+    line-height: 150%;
+}
+/*=========================AHTUNG_SECTION============================================*/
+
+/*=========================ВИДЕО УРОКИ - ГЛАВНАЯ СТРАНИЦА============================================*/
+.video_lessons {
+    margin-top: -1px;
+    background: linear-gradient(180deg, #203943 0%, rgba(32, 57, 67, 0.5) 100%);
+}
+.lessons_container {
+    padding-top: 52px;
+    padding-bottom: 136px;
+}
+.lessons_title {
+    font-size: 40px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-bottom: 31px;
+}
+.lessons_subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 56px;
+}
+.lessons_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 15px;
+    row-gap: 17px;
+}
+.lessons_card {
+    display: flex;
+    flex: 0 1 30%;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 15px;
+    background: #FFFFFF; 
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+.img_cont {
+    /* padding: 15px 15px 19px 15px; */
+    border-radius: 15px;
+    border: 1px solid #9E9E9E;
+    overflow: hidden;
+    transition: all 0.5s;
+    position: relative;
+    box-shadow: 3px 7px 4px rgba(0, 0, 0, 0.25);
+}
+.lessons_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+.lessons_card .img_content {
+    position: absolute;
+    top: -100%; left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .7);
+    transition: all 0.5s;
+}
+/**/
+.img_button {
+    display: inline-flex;
+    margin-top: 25%;
+    background: rgba(255, 153, 0, 0.5);
+    border: 1px solid #203943;
+    border-radius: 15px;
+    padding: 14px 48px;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out 0s;
+}
+.image_name {
+    margin-top: 19px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120.833333%;
+    letter-spacing: 0.03em;
+}
+/*=========================ВИДЕО УРОКИ - ГЛАВНАЯ СТРАНИЦА============================================*/
+
+/*=========================ОТСТУПЫ СТРАНИЦ С ТОВАРАМИ============================================*/
+.for_sect {
+    padding-bottom: 100px;
+    padding-top: 59px;
+}
+/*=========================МАТЕРИАЛЫ ХУДОЖНИКАМ============================================*/
+.for_artists {
+}
+.artists_card {
+    min-height: 600px;
+}
+/*=========================МАТЕРИАЛЫ ХУДОЖНИКАМ============================================*/
+
+/*=========================ХОЛСТЫ============================================*/
+.holst {
+    margin-bottom: 59px;
+}
+.canvases_card {
+    min-height: 680px;
+}
+.top_image {
+}
+/*=========================ХОЛСТЫ============================================*/
+
+/*=========================КИСТИ============================================*/
+.brush {
+    margin-bottom: 59px;
+}
+.brushes_card {
+    min-height: 640px;
+}
+/*=========================КИСТИ============================================*/
+
+/*=========================КАРТОЧКИ_УРОКОВ============================================*/
+.shop_card {
+}
+.buy-lessons_card {
+    min-height: 630px;
+}
+.shop_card-top {
+}
+.lessons_card-image {
+    position: relative;
+}
+.image-label-purple {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(142, 53, 255, 0.78);
+    border: 1px solid rgba(191, 191, 191, 0.75);
+    border-radius: 10px;
+    color: #fff;
+    padding: 11px 20px;
+}
+.image-label-green {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(75, 154, 62, 0.78);
+    border: 1px solid rgba(191, 191, 191, 0.75);
+    border-radius: 10px;
+    color: #fff;
+    padding: 11px 20px;
+}
+.image-label-orange {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 126, 53, 0.78);
+    border: 1px solid rgba(191, 191, 191, 0.75);
+    border-radius: 10px;
+    color: #fff;
+    padding: 11px 20px;
+}
+/*=========================КАРТОЧКИ_УРОКОВ============================================*/
+
+/*=========================САХАРОВ_ТВ-СТРАНИЦА============================================*/
+.for_saharovTV {
+}
+.saharovTV_container {
+}
+.saharovTV_body {
+}
+.saharovTV_video {
+}
+.sTV_video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.saharovTV_bottom-part {
+    display: flex;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+.saharovTV_card {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.saharovTV_card-top {
+}
+.saharovTV_top-title {
+    font-size: 22px;
+    line-height: 118.181818%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.saharovTV_card-bottom {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+.saharovTV_image {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 260px;
+    max-height: 186px;
+}
+.saharovTV_image img {
+    width: 100%;height: 100%;
+    object-fit: cover;
+}
+.saharovTV_right-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.saharovTV_text {
+    font-size: 18px;
+    line-height: 122.222222%;
+    letter-spacing: 0.01em;
+    margin-bottom: 35px;
+}
+.saharovTV_price-button {
+}
+.shop_price {
+}
+.saharovTV_price {
+}
+.price_top-line {
+}
+.price-through {
+}
+.discount {
+}
+.price_normal {
+}
+.bb_con {
+}
+.add-to-cart {
+}
+.buy_button {
+}
+.saharovTV_button {
+}
+.lessons_card {
+}
+.saharovTV_lessons_card {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    border: 1px solid #D9D9D9;
+}
+.img_cont {
+}
+.img_content {
+}
+.img_button {
+}
+.image_name {
+}
+/*=========================САХАРОВ_ТВ-СТРАНИЦА============================================*/
+
+/*=========================САХАРОВ ТВ БЛОК (НИЖНИЙ)============================================*/
+.saharov_tv {
+    padding-bottom: 56px;
+    background: rgba(32, 57, 67, 0.5);
+}
+.saharov_tv_container {
+}
+.saharov_tv_title {
+    font-size: 40px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 48px;
+}
+.saharov_tv_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 25px;
+    row-gap: 17px;
+}
+.saharov_tv_card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 15px;
+    background: #FFFFFF;    
+    border-radius: 15px;
+    border: 1px solid #D9D9D9;
+    transition: all 0.5s;
+}
+
+.img_cont {
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.5s;
+    position: relative;
+}
+.icont {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.saharov_tv_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+.saharov_tv_body .saharov_tv_card .img_content {
+    position: absolute;
+    top: -100%; left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .7);
+    transition: all 0.5s;
+}
+.img_cont {
+}
+.img_content {
+}
+.img_button {
+}
+.image_name {
+}
+/*=========================САХАРОВ ТВ БЛОК (НИЖНИЙ)============================================*/
+
+/*=========================ПОДВАЛ===========================================*/
+.footer {
+    background: rgba(32, 57, 67, 0.5);
+}
+/*ФОН ПОДВАЛА СТРАНИЦ*/
+.artist_footer, .canvases_footer, .brushes_footer, .buy-lessons_footer, .for_saharovTV {
+    background-color: #fff;
+}
+/*=========================ПОДВАЛ===========================================*/
+
+/*=========================ОТЗЫВЫ===========================================*/
+.reviews {
+    margin-bottom: 67px;
+}
+.reviews_container {
+    display: flex;
+}
+.reviews_title {
+}
+.reviews_subtitle {
+}
+.reviews_body {
+    display: flex;
+    flex-wrap: wrap;
+}
+.reviews_item {
+    flex: 0 1 30%;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 15px;
+    padding: 22px 15px 26px 15px;
+}
+.reviews_item img {
+    width: 100%;
+    object-fit: cover;
+}
+/*=========================ОТЗЫВЫ===========================================*/
+
+/*=========================ИНСТИТУТ ЗА 100 ДНЕЙ\ ВИДЕО-АРТ-ГАЛЕРЕЯ===========================================*/
+.other_info {
+    margin-bottom: 100px;
+}
+.other_info_container {
+}
+.other_info-body {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 45px;
+    row-gap: 20px;
+    justify-content: center;
+}
+.other_info-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 15px;
+    padding: 20px 18px 20px 18px;
+    width: 381px;
+    transition: all 0.3s;
+}
+.other_top {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    margin-bottom: 27px;
+}
+.info-item_image {
+    width: 343px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.info-item_image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.info-item_title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 122.222222%;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+}
+.info-item_text {
+    
+    font-size: 14px;
+    line-height: 142.857143%;
+    letter-spacing: 0.03em;
+    color: #676767;
+}
+.bb_other {
+}
+.other_button {
+    padding: 13px 10px;
+}
+/*=========================ИНСТИТУТ ЗА 100 ДНЕЙ\ ВИДЕО-АРТ-ГАЛЕРЕЯ===========================================*/
+
+/*=========================SOCIAL===========================================*/
+.social {
+    margin-bottom: 25px;
+}
+.social_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 45px;
+}
+.social_item {
+}
+/*=========================SOCIAL===========================================*/
+
+
+/*==========================================MEDIA============================================*/
+/*===================================================================*/
+@media (max-width: 1136px) {
+    .menu_body {
+        position: fixed;
+        width: 100%;height: 100%;
+        top: 0;
+        left: -100%;
+        transition: left 0.5s;
+        background: linear-gradient(180deg, #203943 0%, rgba(32, 57, 67, 0.9) 100%);
+        padding: 6.25rem 0.9375rem 1.25rem 0.9375rem;
+        overflow: auto;
+        z-index: 1;
+    }
+    .menu-open .menu_body {
+        left: 0;
+    }
+    .menu_list {
+        flex-direction: column;
+        gap: 35px;
+    }
+    .menu_link {
+        font-size: 30px;
+    }
+    .menu_item {
+        margin-right: 0;
+    }
+    .icon-menu {
+        display: block;
+        position: relative;
+        z-index: 5;
+        width: 1.875rem;
+        height: 1.125rem;
+    }
+    .icon_menu-line,
+    .icon-menu::before,
+    .icon-menu::after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        height: 0.125rem;
+        width: 100%;
+        left: 0;
+        transition: all 0.5s;
+    }
+    .icon-menu::before {
+        top: 0;
+    }
+    .icon-menu::after {
+        bottom: 0;
+    }
+    .icon_menu-line {
+        top: calc(50% - 0.0625rem);
+    }
+    .menu-open .icon-menu::before {
+        top: calc(50% - 0.0625rem);
+        transform: rotate(-45deg);
+    }
+    .menu-open .icon-menu::after {
+        top: calc(50% - 0.0625rem);
+        transform: rotate(45deg);
+    }
+    .menu-open .icon_menu-line {
+        left: 50%;
+        width: 0;
+    }
+    .search_icon {
+        margin-right: 31px;
+    }
+    .rec_bin::before {
+        top: 5px;
+        left: 150px;
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+    }
+    /*======slider========*/
+    .main-slider_container {
+        padding-bottom: 150px;
+    }
+    .main-slider_title {
+        text-align: center;
+        font-size: 60px;
+    }
+    /*========ahtung========*/
+    .ahtung_container {
+        flex-direction: column;
+    }
+    .ahtung_info {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .info_avatar {
+        padding: 20px 45px 0 45px;
+        margin-bottom: 10px;
+    }
+    .info_name {
+        margin-bottom: 15px;
+    }
+    .info_prof {
+        margin-bottom: 15px;
+    }
+    .attention_text {
+        margin-bottom: 11px;
+    }
+    /*====LESSONS=====*/
+    .lessons_card {
+        flex: 0 1 30%;
+    }
+    /*============BUTTON===============*/
+    .no_button {
+        font-size: 16px; 
+    }
+    
+}
+
+@media (max-width: 1024px) {
+    .lessons_card {
+        flex: 0 1 30%;
+    }
+    .image_name {
+        font-size: 20px;
+    }
+    .img_button {
+        padding: 10px 18px;
+        font-size: 18px;
+        line-height: 120%;
+        border-radius: 10px;
+    }
+    /*==============САХАРОВ_ТВ_СТРАНИЦА==================*/
+    .for_saharovTV {
+        padding-bottom: 60px;
+    }
+    .saharovTV_bottom-part {
+        flex-wrap: wrap;
+    }
+    .saharovTV_card {
+        flex: 1 1 auto;
+    }
+    .saharovTV_lessons_card {
+        flex: 1 1 auto;
+    }
+    .saharovTV_lessons_card {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    /*======main_slider========*/
+    .main-slider_container {
+        padding-top: 250px;
+        padding-bottom: 110px;
+    }
+    .main-slider_title {
+        font-size: 45px;
+    }
+    .main-slider_text {
+        font-size: 20px;
+    }
+    /*===ahtung part===*/
+    .ahtung_info {
+        flex: 0 1 auto;
+    }
+    .ahtung_attention {
+        padding: 0 10px;
+    }
+    .attention_title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 145.454545%;
+    }
+    .attention_subtitle {
+        font-size: 18px;
+        line-height: 150%;
+    }
+    .attention_text {
+        font-size: 11px;
+    }
+    /*LESSONS*/
+    .lessons_container {
+        padding-bottom: 90px;
+    }
+    .lessons_card {
+        flex: 0 1 40%;
+    }
+    .saharovTV_lessons_card {
+        flex: 1 1 auto;
+    }
+    .saharovTV_card-bottom {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .saharovTV_image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /*======REVIEW========*/
+    .reviews_item {
+        flex: 0 1 65%;
+    }
+    /*OTHER-INFO*/
+    .other_info {
+        margin-bottom: 50px;
+    }
+    /*БОКОВАЯ КОРЗИНА*/
+    .shopping-cart {
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+    }
+    /**/
+    .for_sect {
+        padding-bottom: 50px;
+    }
+
+}
+
+
+@media (max-width: 630px) {
+    /*LESSONS*/
+    .lessons_card {
+        flex: 0 1 auto;
+    }
+    .saharovTV_lessons_card {
+        flex: 1 1 auto;
+    }
+    /*SAHAROVTV_CARD*/
+    .saharovTV_top-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    /*Настройка корзины*/
+    .popup_content {
+        padding: 13px;
+    }
+    .total_price {
+        padding: 5px 10px;
+    }
+    .form_attentions {
+        padding: 5px 10px;
+        margin-bottom: 5px;
+    }
+    .shopping-cart_form {
+    }
+    .shopping-cart_title {
+        margin-bottom: 12px;
+    }
+    .shopping-cart_subtitle {
+        margin-bottom: 7px;
+    }
+    .shopping-cart_input {
+        font-size: 10px;
+        padding: 3px 0 3px 7px;
+        margin-bottom: 5px;
+    }
+    .shopping-cart_hint {
+        margin-bottom: 13px;
+    }
+    .shopping-cart_comment {
+        padding: 3px 0 3px 7px;
+    }
+    .form_attentions-text {
+        font-size: 10px;
+    }
+    /**/
+    .shop_card {
+        padding: 14px;
+    }
+    .shop_title {
+        font-size: 26px;
+    }
+    .shop_subtitle {
+        font-size: 16px;
+    }
+    /*ОТСТУПЫ МЕЖДУ КАРТОЧКАМИ ТОВАРОВ*/
+    .shop_body {
+        column-gap: 10px;
+        row-gap: 15px;
+    }
+
+    /*OTHER_ITEM-PADDING*/
+    .other_info-item {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 535px) {
+    /*HEADER_FORM_INPUT*/
+    .header_form-input {
+        margin-left: 5px;
+        margin-right: 10px;
+        width: 440px;
+    }
+    /*РАСШИРЕННЫЙ_ПОИСК*/
+    .extended_search {
+        margin-left: 5px;
+        margin-right: 10px;
+        width: 440px;
+    }
+}
+
+@media (max-width: 480px) {
+    /*===Header part===*/
+    .header_logo {
+        font-size: 20px;
+        line-height: 195%;
+    }
+    .menu_list {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .menu_link {
+        font-size: 18px;
+    }
+    /*MENU_CARD_COUNT*/
+    .rec_bin::before {
+        top: 0;
+        left: 95px;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+    }
+    /*HEADER_FORM_INPUT*/
+    .header_form-input {
+        width: 370px;
+    }
+    /*РАСШИРЕННЫЙ_ПОИСК*/
+    .extended_search {
+        width: 370px;
+    }
+    .extended_search-top {
+        padding: 7px 0px 7px 10px;
+    }
+    .extended_search-middle {
+        padding: 7px 0px 7px 10px;
+    }
+    .extended_search-bottom {
+        padding: 15px 15px 15px 10px;
+    }
+    .bottom-item_image {
+        margin-right: 7px;
+    }
+    .bottom-item_name {
+        font-size: 14px;
+    }
+    .search_price-through {
+        font-size: 14px;
+    }
+    .search_discount {
+        font-size: 12px;
+    }
+    .search_price-normal {
+        font-size: 16px;
+    }
+    /*======main_slider========*/
+    .main-slider_container {
+        padding-top: 200px;
+        padding-bottom: 90px;
+    }
+    .main-slider_title {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    .main-slider_text {
+        font-size: 18px;
+    }
+    .bullets_items {
+        justify-content: center;
+    }
+    /*FORM*/
+    .form {
+        width: 300px;
+    }
+    .form_hint {
+        font-size: 10px;
+    }
+    .form_input {
+        font-size: 14px;
+    }
+
+    /*===ahtung part===*/
+    .ahtung_container {
+        padding-bottom: 35px;
+    }
+    .info_name {
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .info_prof {
+        font-size: 14px;
+        line-height: 150%;
+    }
+    .info_avatar img {
+        /* width: 100%; */
+        object-fit: cover;
+    }
+    .attention_title {
+        font-size: 12px;
+    }
+    .attention_subtitle {
+        font-size: 11px;
+    }
+    /*===========VIDEO_LESSONS===========*/
+    .lessons_container {
+        padding-top: 20px;
+        padding-bottom: 65px;
+    }
+    .lessons_title {
+        font-size: 20px;
+        line-height: 120%;
+    }
+    .lessons_subtitle {
+        font-size: 14px;
+        line-height: 121.428571%;
+        margin-bottom: 35px;
+    }
+    .image_name {
+        font-size: 18px;
+        line-height: 105.555556%;
+    }
+    .img_button {
+        padding: 12px 35px;
+    }
+    /*======saharovTV_Cards========*/
+    .saharovTV_card {
+        padding: 10px 10px;
+    }
+    .saharovTV_lessons_card {
+        padding: 10px;
+    }
+    /*======REVIEW========*/
+    .reviews_item {
+        flex: 0 1 75%;
+    }
+    /*SOCIAL*/
+    .social_container {
+        column-gap: 15px;
+    }
+    .social_item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /*other_CARDS*/
+    .info-item_image {
+        width: 100%;
+    }
+    .other_info-item {
+        flex: 0 1 auto;
+        width: auto;
+    }
+    .info-item_title {
+        font-size: 16px;
+    }
+    .info-item_text {
+        font-size: 12px;
+    }
+    .other_button {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 416px) {
+    .info_avatar img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    /*======MAIN_SLIDER=======*/
+    .main-slider_container {
+        padding-top: 170px;
+        padding-bottom: 80px;
+    }
+    .main-slider_title {
+        font-size: 30px;
+        margin-bottom: 65px;
+    }
+    .main-slider_text {
+        font-size: 18px;
+    }
+    /*HEADER_FORM_INPUT*/
+    .header_form-input {
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 310px;
+    }
+    /*РАСШИРЕННЫЙ_ПОИСК*/
+    .extended_search {
+        margin-right: 5px;
+        width: 310px;
+    }
+    /*FORM*/
+    .form {
+        width: 300px;
+    }
+
+    /*======REVIEW========*/
+    .reviews_item {
+        flex: 0 1 100%;
+    }
+}
+@media (max-width: 330px) {
+    /*======MAIN_SLIDER=======*/
+    .main-slider_container {
+        padding-top: 170px;
+        padding-bottom: 80px;
+    }
+    .main-slider_title {
+        font-size: 30px;
+        margin-bottom: 65px;
+    }
+    .main-slider_text {
+        font-size: 18px;
+    }
+    /*FORM*/
+    .form {
+        width: 280px;
+    }
+    .form_body {
+        padding: 15px 10px 10px 10px;
+    }
+}
+
+/*MINWIDTH-ХОВЕРЫ*/
+@media (min-width: 768px) {
+    /*ШАПКА*/
+    .menu_link:hover {
+        text-decoration: underline;
+    }
+    /*БОКОВАЯ КОРЗИНА HOVER*/
+    .shopping-cart:hover {
+        outline: .5rem solid #ff5e0075;
+    }
+    /*АХТУНГ СЕКЦИЯ ХОВЕР СТАРТ ЧАТ КНОПКИ*/
+    .info_button img:hover {
+        scale: 0.9;
+    }
+    /*Lessons_card_hover*/
+    .lessons_card:hover {
+        /* transform: translateY(-5px); */
+        transform: scale(1.02);
+        box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.25);
+    }
+    .video_lessons .lessons_container .lessons_body .lessons_card .img_cont:hover .img_content {
+        top: 0;
+    }
+    .img_button:hover {
+        background: #FF9900;
+    }
+    /*HOVER_CARD*/
+    .shop_card:hover {
+        /* transform: scale(1.01); */
+        transform: translateY(-7px);
+        box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    /*SAHAROV_TV-CARD HOVER*/
+    .saharov_tv_card:hover {
+        transform: scale(1.01);
+        box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.25);
+    }
+    .saharov_tv .saharov_tv_container .saharov_tv_body .saharov_tv_card .img_cont:hover .img_content {
+        top: 0;
+    }
+    .saharovTV_card:hover {
+        /* transform: translateY(-5px); */
+        transform: scale(1.02);
+        box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.25);
+    }
+    /*VIDEO_ART COURSE-100DAYS*/
+    .other_info-item:hover {
+        transform: scale(1.01);
+        box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.25);
+    }
+    /*BUT_BUTTONS_HOVER*/
+    .buy_button:hover {
+    color: #fff;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #203943 51.56%);
+    }
+    .no_button:hover {
+        color: #000;
+        background: red;
+    }
+}
